@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Arthritis Assistant</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app">
+  <header>
+    <h1>🤖 AI Arthritis Assistant</h1>
+    <p>Smart help for joint health and mobility</p>
+  </header>
+
+  <div class="grid">
+
+    <!-- Voice Command -->
+    <div class="card">
+      <h3><i class="fa-solid fa-microphone"></i> Voice Command</h3>
+      <button onclick="startListening()">Start Listening</button>
+      <p id="speechText">Your speech will appear here...</p>
+    </div>
+
+    <!-- Text to Speech -->
+    <div class="card">
+      <h3><i class="fa-solid fa-volume-high"></i> Text to Speech</h3>
+      <textarea id="ttsText" placeholder="Type text to speak..."></textarea>
+      <button onclick="speakText()">Read Text</button>
+    </div>
+
+    <!-- Pain Tracker -->
+    <div class="card">
+      <h3><i class="fa-solid fa-heart-pulse"></i> Pain Tracker</h3>
+      <input type="number" id="painInput" min="0" max="10" placeholder="Pain level 0-10">
+      <button onclick="addPain()">Add Pain</button>
+      <canvas id="painChart"></canvas>
+    </div>
+
+    <!-- Exercise Demo -->
+    <div class="card">
+      <h3><i class="fa-solid fa-dumbbell"></i> Exercise Guide</h3>
+      <video id="exerciseVideo" width="100%" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+      </video>
+      <button onclick="playExercise()">Play Exercise</button>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
